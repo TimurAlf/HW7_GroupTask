@@ -1,28 +1,3 @@
-import os
-def main(): # Меню
-    print('Добро пожаловать в телефонный справочник! \n Выберите один из пунктов:')
-    print('1. Создать новый телефонный справочник (telephone.csv)')
-    print('2. Вывести список файлов в папке на экран ')
-    print('3. Вывести основной телефонный справочник на экран')
-    print('4. Импортировать справочник из csv файла')
-    print('5. Импортировать справочник из txt файла')
-    print('6. Ввести новый контакт с клавиатуры ')
-    print('7. Экспортировать основной справочник в txt файл')
-    print('8. Выход \n')
-    num = input('Введите число от 1 до 8 > ')
-    try:
-        num = int(num)
-    except:
-        system("cls")
-        print('Это не число')
-        main()
-        exit()
-    if 1 <= int(num) <= 8:
-        choice_method(num)
-    else:
-        system("cls")
-        print('Неправильное число')
-        main()
-        exit()
-    
-main()
+from choice import user_interface
+
+user_interface()
